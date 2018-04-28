@@ -69,6 +69,7 @@ export class ImageExtend {
                 }
             }
             if (item && item.kind === 'file' && item.type.match(/^image\//i)) {
+                e.preventDefault()
                 this.file = item.getAsFile()
                 let self = this
                 // 如果图片限制大小
